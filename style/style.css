@@ -14,6 +14,7 @@ body {
   font-size: 2rem;
   line-height: 1.5;
   box-sizing: border-box;
+  color: #58605e;
 }
 
 p {
@@ -22,7 +23,7 @@ p {
 h1,
 h2,
 h3 {
-  color: var(--color-heading);
+  color: black;
   margin-bottom: 1rem;
   line-height: 1.1;
 }
@@ -35,7 +36,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2, 5rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 
@@ -371,12 +372,64 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    height: 40vh;
   }
   .customer__img {
     width: 10rem;
     height: 10rem;
+    justify-self: self-start;
+    align-self: flex-start;
   }
   .testimony__grid {
     box-shadow: 20px 20px rgba(239, 186, 108, 0.1);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/* Blogs*/
+
+.blog__writer {
+  color: var(--primary-color);
+}
+.blog--desc {
+  padding: 15px;
+}
+.blog-article {
+  max-width: 400px;
+}
+
+.blog__by {
+  letter-spacing: 1.3px;
+}
+
+.blog--item {
+  margin-bottom: 10px;
+}
+.blog--title {
+  margin-top: 0;
+}
+
+.blog--item img {
+  height: 60vh;
+  object-fit: cover;
+}
+.blog--grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .blog--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .blog--grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
