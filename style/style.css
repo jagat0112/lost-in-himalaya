@@ -47,6 +47,10 @@ a {
   color: white;
 }
 
+.relative {
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 6rem;
@@ -164,6 +168,36 @@ a {
   max-width: 400px;
 }
 
+/* Heading Background */
+.heading-bg {
+  color: rgba(163, 159, 159, 0.1);
+  font-size: 70px;
+  font-weight: 900;
+  position: absolute;
+  text-transform: uppercase;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  line-height: 1.1;
+}
+.story .heading-bg {
+  left: 40%;
+  transform: translateX(-67%);
+}
+
+@media screen and (min-width: 1024px) {
+  .story .heading-bg {
+    left: 40%;
+    transform: translateX(-90%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .story .heading-bg {
+    left: 40%;
+    transform: translateX(-120%);
+  }
+}
 /* Journey */
 
 .journey {
@@ -329,6 +363,7 @@ a {
   width: 4rem;
   height: 4rem;
   margin: 20px;
+  border-radius: 100%;
 }
 
 @media screen and (min-width: 768px) {
