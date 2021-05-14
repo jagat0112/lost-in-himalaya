@@ -226,3 +226,122 @@ a {
 .journey__price-desc {
   text-shadow: 0 0 20px black;
 }
+/* Team */
+.team,
+.story,
+.testimony,
+.hero {
+  padding-top: 60px;
+}
+.team--photo {
+  max-width: 420px;
+  width: 100%;
+}
+
+.team-staff {
+  text-align: center;
+}
+.team-staff__name {
+  margin-bottom: 0;
+}
+
+.team-staff__post {
+  margin-top: 15px;
+  color: #888888;
+}
+.team-staff__text {
+  font-weight: 300;
+}
+
+.team .grid {
+  padding: 10px;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .team.grid--1X3 {
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .team--article {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .team.grid--1X3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+/* Media Icons */
+
+.media-icon {
+  border-radius: 50%;
+  padding: 10px 13px;
+  background-color: #fcf1e2;
+}
+
+.media-icon a {
+  color: var(--primary-color);
+}
+
+/* Testimony */
+.testimony--header {
+  text-align: center;
+}
+
+.line-icon {
+  width: 30px;
+  padding-right: 10px;
+  color: #58605e;
+}
+
+.customer__name {
+  display: flex;
+}
+
+.customer--section {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: #58605e;
+}
+.customer__comment::after {
+  content: close-quote;
+}
+
+.customer__comment::before {
+  content: open-quote;
+}
+
+.testimony__grid {
+  display: grid;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  grid-template-columns: auto 1fr;
+  background-color: var(--primary-color);
+  box-shadow: 0 20px rgba(239, 186, 108, 0.1);
+}
+.customer__img {
+  width: 4rem;
+  height: 4rem;
+  margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimony--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .customer__img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .testimony__grid {
+    box-shadow: 20px 20px rgba(239, 186, 108, 0.1);
+  }
+}
