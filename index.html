@@ -10,13 +10,13 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style/style.css" />
     <title>Lost in Himalayas</title>
   </head>
   <body>
     <article class="hero hero__container">
-      <header class="container">
+      <header class="container" data-aos="fade-right">
         <h1 class="hero__heading">Let's Enjoy The Wonders of Nature</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
@@ -26,7 +26,7 @@
     </article>
 
     <article class="story grid grid--1X2 container p-5">
-      <section class="story--desc">
+      <section class="story--desc" data-aos="fade-right"> 
         <header class="story--desc__header relative">
           <p class="heading--sub">Discover story</p>
           <h2 class="heading--main">Our Story</h2>
@@ -44,7 +44,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section data-aos="fade-left">
         <img
           class="story--img"
           src="images/trek.jpeg"
@@ -54,37 +54,37 @@
     </article>
 
     <article class="container journey">
-      <header class="jounrey--desc__header relative" style="overflow: hidden">
+      <header class="jounrey--desc__header relative" style="overflow: hidden" data-aos="flip-up" data-aos-duration="1000">
         <p class="heading--sub">Journey</p>
         <h2 class="heading--main">Your Journey Starts Here</h2>
         <p class="heading-bg">journey</p>
       </header>
-      <section class="journey__grid grid grid--2X3 grid--1X3">
-        <div class="journey__items-1 background--img">
+      <section class="journey__grid grid grid--2X3 grid--1X3" >
+        <div class="journey__items-1 background--img" data-aos="zoom-in">
           <h3 class="journey__price"><a href="">$2,000</a></h3>
           <p class="journey__price-desc"><a href="">Mardi Himal Trek</a></p>
         </div>
-        <div class="journey__items-2 background--img">
+        <div class="journey__items-2 background--img" data-aos="zoom-in">
           <h3 class="journey__price"><a href="">$1,800</a></h3>
           <p class="journey__price-desc"><a href="">Rolwaling Trek</a></p>
         </div>
-        <div class="journey__items-3 background--img">
+        <div class="journey__items-3 background--img" data-aos="zoom-in">
           <h3 class="journey__price"><a href="">$1,200</a></h3>
           <p class="journey__price-desc">
             <a href="">Annpurna Circuit Trek</a>
           </p>
         </div>
-        <div class="journey__items-4 background--img">
+        <div class="journey__items-4 background--img" data-aos="zoom-in">
           <h3 class="journey__price">$1,200</h3>
           <p class="journey__price-desc">Everest Base Camp Trek</p>
         </div>
-        <div class="journey__items-5 background--img">
+        <div class="journey__items-5 background--img" data-aos="zoom-in">
           <h3 class="journey__price"><a href="#">$1,000</a></h3>
           <p class="journey__price-desc">
             <a href="#">Langtang Valley Trek</a>
           </p>
         </div>
-        <div class="journey__items-6 background--img">
+        <div class="journey__items-6 background--img" data-aos="zoom-in">
           <h3 class="journey__price"><a href="">$1,900</a></h3>
           <p class="journey__price-desc"><a href="">Tsho Rolpa Lake Trek</a></p>
         </div>
@@ -92,13 +92,13 @@
     </article>
     <!-- TEAM -->
     <article class="team container">
-      <header class="jounrey--desc__header relative">
+      <header class="jounrey--desc__header relative" data-aos="flip-up" data-aos-duration="500">
         <p class="heading--sub">Amazing staff</p>
         <h2 class="heading--main">Meet Our Team</h2>
         <p class="heading-bg">Our Team</p>
       </header>
       <section class="team grid grid--1X3">
-        <div class="team--article">
+        <div class="team--article" data-aos="zoom-in-right">
           <img
             class="team--photo"
             sizes="(max-width: 1280px) 100vw, 1280px"
@@ -131,7 +131,7 @@
             </div>
           </div>
         </div>
-        <div class="team--article">
+        <div class="team--article" data-aos="zoom-in">
           <img
             class="team--photo"
             src="images/Tanya-Perez.jpg"
@@ -157,7 +157,7 @@
             </div>
           </div>
         </div>
-        <div class="team--article">
+        <div class="team--article" data-aos="zoom-in-left">
           <img
             class="team--photo"
             src="images/office.jpg"
@@ -187,7 +187,7 @@
       </section>
     </article>
     <!-- Testimony -->
-    <section class="testimony container">
+    <section class="testimony container" data-aos="zoom-in-up">
       <header
         class="testimony--header"
         style="position: relative; overflow: hidden"
@@ -232,7 +232,7 @@
     </section>
 
     <!-- Blogs -->
-    <section class="blog container">
+    <section class="blog container" data-aos="fade-up">
       <header class="jounrey--desc__header relative">
         <p class="heading--sub">Udates</p>
         <h2 class="heading--main">Our Blogs</h2>
@@ -324,7 +324,7 @@
       </div>
     </section>
     <!-- Callouts -->
-    <section class="callouts container">
+    <section class="callouts container" >
       <div class="callouts--desc">
         <h2 class="callouts__head">Join and Trip With Us</h2>
       <p class="callouts__desc">
@@ -335,5 +335,10 @@
       <a class="btn btn--primary" href="#">Get in touch</a>
     </section>
       </div>
+      <!-- Animations -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
   </body>
 </html>
