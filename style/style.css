@@ -542,12 +542,14 @@ a {
     display: flex;
     max-height: 100vh;
     opacity: 1;
-    justify-content: space-between;
-    align-content: center;
+    /* justify-content: space-between; */
+    /* align-content: center; */
   }
 
   .nav__items {
-    padding-left: 100px;
+    margin: 0 50px;
+    margin-top: 23px;
+    padding-bottom: 0 !important;
   }
 
   .nav--burger {
