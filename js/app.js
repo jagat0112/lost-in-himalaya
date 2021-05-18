@@ -6,60 +6,39 @@ collabsible.forEach((c) => {
   });
 });
 
-// const person = {
-//   name: "norgen",
-//   hobbies: ["a", "b"],
-//   age: 10,
-//   change(name) {
-//     this.name = name;
-//   },
-//   hob: [1, 2, 3],
+const _stack = new WeakMap();
 
-//   greet() {
-//     this.hobbies.forEach(
-//       function (hob) {
-//         console.log(hob);
-//       }.bind(this)
-//     );
-//   },
-// };
+class Stack {
+  constructor() {
+    _stack.set(this, []);
 
-// person.greet();
+    this.count = _stack.get(this).length;
+  }
 
-// callPerson();
+  push(item) {
+    const arr = _stack.get(this);
+    arr.push(item);
+    this.count = arr.length;
+    _stack.set(this, arr);
+  }
 
-// function CallingAnother(name) {
-//   this.name = name;
-//   this.calling = () => {
-//     console.log(this.name);
-//   };
-// }
+  pop() {
+    const arr = _stack.get(this);
+    if (this.count === 0) {
+      throw new Error("Empty Array");
+    }
+    arr.pop();
+    this.count = arr.length;
+    _stack.set(this, arr);
+  }
 
-// const action = new CallingAnother("jagat shrestha");
-// action.calling();
+  peek() {
+    const arr = _stack.get(this);
+    if (this.count === 0) {
+      throw new Error("Empty Array");
+    }
+    return arr[arr.length - 1];
+  }
+}
 
-// const callPerson = (nam) => {
-//   return {
-//     nam,
-//     calling: () => {
-//       console.log(nam);
-//     },
-//   };
-// };
-// const callAnu = callPerson("Anu");
-// callAnu.calling();
-
-// function CallPerson2(nam) {
-//   this.nam = nam;
-//   this.calling = () => {
-//     console.log(nam);
-//   };
-//   this.greet = () => {
-//     console.log(`Hello ${name}`);
-//   };
-// }
-// const calls = new CallPerson2("krishan pradhan");
-// const calls1 = new CallPerson2("mami");
-
-// calls.calling();
-// calls.greet();
+const stack = new Stack();

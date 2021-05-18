@@ -188,6 +188,10 @@ a {
   transform: translateX(-67%);
 }
 
+.footer .heading-bg {
+  top: -5px;
+}
+
 @media screen and (min-width: 1024px) {
   .story .heading-bg {
     left: 40%;
@@ -636,4 +640,7 @@ a {
   .footer--contact {
     border: none !important;
   }
+}
+.footer__items {
+  font-size: 14px;
 }
